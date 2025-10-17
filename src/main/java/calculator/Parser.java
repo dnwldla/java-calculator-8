@@ -5,11 +5,15 @@ import java.util.List;
 
 public class Parser {
 
-    public Parser() {
+    private final String input;
+    private final String regex;
 
+    public Parser(String input, String regex) {
+        this.input = input;
+        this.regex = regex;
     }
 
-    List<Integer> parseNumbers(String input, String regex) {
+    List<Integer> parseNumbers() {
         String[] parts = input.split(regex);
         List<Integer> numbers = new ArrayList<>();
 

@@ -1,32 +1,20 @@
 package calculator;
 
-import java.util.List;
-
-public class BasicSeparator implements Separator {
-
-    private final String input;
-    private final Parser parser;
+public class BasicSeparator extends Separator {
 
     public BasicSeparator(String input) {
-        this.input = input;
-        this.parser = new Parser();
+        super(input);
     }
+
 
     @Override
-    public List<Integer> buildNumbers() {
-        return getParse();
-    }
-
-    private String getPattern() {
+    public String extractDelimiter() {
         return "[:,]";
     }
 
-    private String getNumbers() {
+    @Override
+    public String extractNumbers() {
         return input;
-    }
-
-    private List<Integer> getParse() {
-        return parser.parseNumbers(getNumbers(), getPattern());
     }
 
 }

@@ -1,27 +1,18 @@
 package calculator;
 
-import java.util.List;
-
-public class CustomSeparator implements Separator {
+public class CustomSeparator extends Separator {
 
     private static final int LIMIT = 1;
     private static final String START = "//";
     private static final String END = "\\n";
 
-    private final Parser parser;
-    private final String input;
-
     public CustomSeparator(String input) {
-        this.input = input;
-        this.parser = new Parser();
+        super(input);
+
     }
 
     @Override
-    public List<Integer> buildNumbers() {
-        return build();
-    }
-
-    private String getPattern() {
+    public String extractDelimiter() {
         int startIndex = input.indexOf(START) + 2;
         int endIndex = input.indexOf(END);
 
@@ -32,7 +23,8 @@ public class CustomSeparator implements Separator {
 
     }
 
-    private String getNumbers() {
+    @Override
+    public String extractNumbers() {
         int endIndex = input.indexOf(END);
         return input.substring(endIndex + 2);
     }
@@ -55,7 +47,4 @@ public class CustomSeparator implements Separator {
     }
 
 
-    private List<Integer> build() {
-        return parser.parseNumbers(getNumbers(), getPattern());
-    }
 }

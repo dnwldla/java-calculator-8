@@ -14,7 +14,7 @@ public class BasicSeparatorTest {
 
         assertThatThrownBy(() -> separator.buildNumbers())
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("입력형태가 올바르지 않습니다");
+            .hasMessage("입력 형태가 올바르지 않습니다");
     }
 
     @Test
