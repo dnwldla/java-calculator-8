@@ -12,7 +12,7 @@ public class CustomSeparator extends Separator {
     }
 
     @Override
-    public String extractDelimiter() {
+    protected String extractDelimiter() {
         int startIndex = input.indexOf(START) + 2;
         int endIndex = input.indexOf(END);
 
@@ -24,7 +24,7 @@ public class CustomSeparator extends Separator {
     }
 
     @Override
-    public String extractNumbers() {
+    protected String extractNumbers() {
         int endIndex = input.indexOf(END);
         return input.substring(endIndex + 2);
     }

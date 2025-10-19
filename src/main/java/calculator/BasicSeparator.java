@@ -8,12 +8,12 @@ public class BasicSeparator extends Separator {
 
 
     @Override
-    public String extractDelimiter() {
+    protected String extractDelimiter() {
         return "[:,]";
     }
 
     @Override
-    public String extractNumbers() {
+    protected String extractNumbers() {
         return input;
     }
 
