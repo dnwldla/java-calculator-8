@@ -22,3 +22,9 @@
 <h3>문자열을 계산할 떄</h3>
 
 - 숫자가 아니다
+
+  
+
+<h2>플로우차트</h2>
+
+<img width="500" height="700" src="https://github.com/user-attachments/assets/0287cad1-b5f0-4be2-ab80-bb8b6c5c8d15" />
